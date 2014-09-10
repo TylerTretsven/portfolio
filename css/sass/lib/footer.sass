@@ -1,0 +1,20 @@
+
+footer
+  background-color: $text-color
+
+  .column
+    padding: 3em 2em
+
+    @include media($bp-sm)
+      @include span-columns(6)
+      text-align: right
+      
+      &:first-of-type
+        text-align: left
+        padding-top: 4.125em
+      
+    p
+      color: $link-color
+      font-family: $sans
+      font-size: 1.25em
+      margin-bottom: 0

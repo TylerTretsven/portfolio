@@ -1,0 +1,64 @@
+
+
+.introduction .occupation {
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-name: slidein;
+
+  -moz-animation-duration: 400ms;
+  -moz-animation-name: slidein;
+
+  -o-animation-duration: 400ms;
+  -o-animation-name: slidein;
+
+  animation-duration: 400ms;
+  animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    margin-top: 1em;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slidein {
+  0% {
+    margin-top: 1em;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes slidein {
+  0% {
+    margin-top: 1em;
+    -o-opacity: 0;
+    opacity: 0
+  }
+  100% {
+    margin-top: 0;
+    -o-opacity:1;
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-top: 1em;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}

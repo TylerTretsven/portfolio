@@ -2,19 +2,179 @@
 layout: default
 ---
 
-<div class="home">
+<section id="intro" class="jumbo">
+  <div class="wrapper">
+    
+    <div class="introduction">
+      <h1 class="name">Hi, my name is <span class="highlight">Tyler Tretsven</span>.</h1>
+      <h1 class="occupation">I'm a front-end developer and UX designer in Minneapolis, MN.</h1>
+    </div>
 
-  <h1>Posts</h1>
+  </div>
+</section>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<section class="band">
+  <div class="wrapper">
+    <div class="inner">
+      <h1>What I do</h1>
+      <p>I value good design and good engineering on the web. Each relies on the other, and I have spent
+        a lot of time learning to both well.</p>
+    </div>
+  </div>
+</section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="arrow-section-dark">
+  <div class="arrow-down-dark"></div>
 </div>
+
+<section id="skills">
+  <div class="wrapper">
+    <div class="skill-wrap">
+      <h1>Development</h1>
+      <aside>
+        <img src="/assets/img/development.png" alt="Development">
+        <ul>
+          <li>HTML5, CSS3, JS</li>
+          <li>WordPress</li>
+          <li>AngularJS, Backbone</li>
+          <li>CSS preprocessing</li>
+          <li>Front-End Templates</li>
+          <li>AJAX</li>
+        </ul>
+      </aside>
+      <h2>I use the latest web technologies to produce high-performance, responsive 
+        websites.  Here is some filler text for equivalent word counts.</h2>
+      <p>I have spent time learning the prominent languages, technologies, and techniques used in front-end development.  I am skilled in HTML, CSS, and JavaScript.  I have also spent time learning advanced front-end web development, such as front-end template systems, client-side JavaScript applications, and CSS preprocessing.  I have built custom themes with WordPress – of which this portfolio is an example.</p>
+      <p>Although I've so far had limited experience developing websites and applications with other developers, I try to have the self-discipline to use techniques in my development process that would make teamwork possible.  I do my best to write clear, concise, and richly annotated code that can be understood by another developer.  I've spent too much time reading JavaScript style guides.  I run test suites to monitor for bugs, and I try to use version control.</p>
+      <!-- <p>I try not to re-invent the wheel, when possible.  I've made good use of many of the open source libraries and frameworks that other developers have built.  In the future, I hope to make my own contributions to these projects.</p> -->
+    </div>
+
+    <div class="skill-wrap">
+      <h1>User-Experience Design</h1>
+      <aside>
+        <img src="/assets/img/design.png" alt="Development">
+        <ul>
+          <li>HTML5, CSS3, JS</li>
+          <li>WordPress</li>
+          <li>AngularJS, Backbone</li>
+          <li>CSS preprocessing</li>
+          <li></li>
+        </ul>
+      </aside>
+      <h2>Cognitive science and anthropology have taught me a lot about how to leverage
+        the human mind in order to create simple and memorable experiences.</h2>
+      <p>I have spent time learning the prominent languages, technologies, and techniques used in front-end development.  I am skilled in HTML, CSS, and JavaScript.  I have also spent time learning advanced front-end web development, such as front-end template systems, client-side JavaScript applications, and CSS preprocessing.  I have built custom themes with WordPress – of which this portfolio is an example.</p>
+      <p>Although I've so far had limited experience developing websites and applications with other developers, I try to have the self-discipline to use techniques in my development process that would make teamwork possible.  I do my best to write clear, concise, and richly annotated code that can be understood by another developer.  I've spent too much time reading JavaScript style guides.  I run test suites to monitor for bugs, and I try to use version control.</p>
+      <!-- <p>I try not to re-invent the wheel, when possible.  I've made good use of many of the open source libraries and frameworks that other developers have built.  In the future, I hope to make my own contributions to these projects.</p> -->
+    </div>
+  </div>
+</section>
+
+
+
+<section class="label">
+  <div class="wrapper">
+    <h1>Want to talk about a job opening or a new project?</h1>
+    <h1>
+      <a class="button" href="#contact">Get in Touch</a>
+    </h1>
+  </div>
+</section>
+
+<div class="arrow-section-medium">
+  <div class="arrow-down-medium"></div>
+</div>
+
+<section id="work">
+  <div class="wrapper">
+    
+    <header>
+      <h1 class="title">What I&rsquo;ve Done</h1>
+    </header>
+    
+    <ul>
+      <li>
+        <header>
+          <!-- <div class="wrapper"> -->
+            <h1><span class="close">X &nbsp;</span>Bad Mojo &mdash; <span class="project-type">Band Website</span></h1>
+          <!-- </div> -->
+        </header>
+        <div class="content">
+          <div class="wrapper">
+            <div class="description">
+              <p>
+                This plugin goes through a collection of anchor tags and makes it so that
+                those with links to other portions go to those sections with a fluid scrolling
+                motion rather than with an abrupt jump.  This can be nice if you don't want to
+                confuse users who may think that they had been taken to a new page
+              </p>
+            </div>
+            <img src="/assets/img/development-small.png" alt="">
+          </div>
+        </div>  
+      </li>
+
+      <li>
+        <header>
+          <!-- <div class="wrapper"> -->
+            <h1><span class="close">X &nbsp;</span>FluidScroll.js &mdash; <span class="project-type"> jQuery Plugin</span></h1>
+          <!-- </div> -->
+        </header>
+        <div class="content">
+          <div class="wrapper">
+            <div class="description">
+              <p>
+                This plugin goes through a collection of anchor tags and makes it so that
+                those with links to other portions go to those sections with a fluid scrolling
+                motion rather than with an abrupt jump.  This can be nice if you don't want to
+                confuse users who may think that they had been taken to a new page
+              </p>
+            </div>
+            <img src="/assets/img/development-small.png" alt="">
+          </div>
+        </div> 
+      </li>
+
+      <li>
+        <header>
+          <!-- <div class="wrapper"> -->
+            <h1><span class="close">X &nbsp;</span>Axelrod &mdash; <span class="project-type">Prisoner's Dilemma Simulation (Game Theory)</span></h1>
+          <!-- </div> -->
+        </header>
+        <div class="content">
+          <div class="wrapper">
+            <div class="description">
+              <p>
+                This plugin goes through a collection of anchor tags and makes it so that
+                those with links to other portions go to those sections with a fluid scrolling
+                motion rather than with an abrupt jump.  This can be nice if you don't want to
+                confuse users who may think that they had been taken to a new page
+              </p>
+            </div>
+            <img src="/assets/img/development-small.png" alt="">
+          </div>
+        </div>  
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="wrapper">
+    <div id="map"></div>
+    <div class="overlay">
+      <div class="wrapper">
+        <div class="column">
+          <h1>Contact Information</h1>
+          <p>If you have an idea for a project, or if you would like to talk about a
+            job, you can reach me here either by email or by phone.</p>
+          <h2>Email</h2>
+          <p>tyler.tretsven@gmail.com</p>
+          <h2>Phone</h2>
+          <p>(763) 226 &bull; 3848</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

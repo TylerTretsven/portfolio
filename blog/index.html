@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section id="article" role="main">
+  <div class="wrapper">
+    <div class="article-wrap">
+
+      {% for post in site.posts %}
+      <article>
+        <header>
+          <p class="topic">Department of {{ post.department }}</p>
+          <h1><a href="{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.title }}">{{ post.title }}</a></h1>
+          <p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+        </header>
+          
+        {{ post.excerpt }}
+
+      </article>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

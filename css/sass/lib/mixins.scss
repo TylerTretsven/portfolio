@@ -1,0 +1,21 @@
+
+/* Keyframe Mixin from https://gist.github.com/freshyill/3800217 */
+@mixin keyframes($name) {
+  @-moz-keyframes #{$name}    { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+  @-o-keyframes #{$name}      { @content; }
+  @-ms-keyframes #{$name}     { @content; }
+  @-khtml-keyframes #{$name}  { @content; }
+  @keyframes #{$name}         { @content; }
+}
+ 
+// // Create the keyframes using the mixin
+// @include keyframes(textglow) {
+//   from { text-shadow: 0 0 9px red; color: red;}
+//     to { text-shadow: 0 0 19px pink; color: pink;}
+// }
+ 
+// // Use the keyframes
+// h1 {
+//   @include animation(textglow 8s infinite);
+// }

@@ -1,12 +1,33 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta charset="utf-8">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+     Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <title>Portfolio | Tyler Tretsven</title>
+  
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Tyler Tretsven">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+
+
+  <link rel="stylesheet" href="{{ "/bower_components/normalize.css/normalize.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/index.css" | prepend: site.baseurl }}">
+  
+  <!-- Forked from Stateface by Propublica - http://propublica.github.io/stateface/ -->
+  <link rel="stylesheet" href="{{ "/stateface/reference/styles.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/stateface/reference/stateface.css" | prepend: site.baseurl }}">
+
+  <script src="{{ "/bower_components/modernizr/modernizr.js" | prepend: site.baseurl }}"></script>
+  <script src="http://use.typekit.net/qit2ias.js"></script>
+  <script>
+    try {
+      Typekit.load();
+    } catch (e) {
+      console.log(e);
+    }
+  </script>
 </head>

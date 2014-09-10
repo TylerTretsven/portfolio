@@ -1,0 +1,146 @@
+
+.article-wrap
+  // @include media($bp-xl)
+  //   @include span-columns(9)
+
+article
+  margin: auto
+  padding: 2em 0 2em
+  border-bottom: solid 5px $text-color
+  margin-bottom: 1em
+  max-width: 50em
+
+  &:first-of-type
+    padding-top: 0
+
+  &:last-of-type
+    border: none
+  
+  header
+    padding-top: 1em
+    text-align: center
+
+    .topic
+      font-family: $sans
+      font-size: 0.875em
+      font-weight: $bold-weight
+      font-style: italic
+      letter-spacing: 4px
+      word-spacing: 4px
+      text-transform: uppercase
+      margin-bottom: 0
+
+      a
+        color: $text-color
+        text-decoration: none
+
+        &:hover
+          color: $link-color
+
+    h1
+      font-family: $serif
+      font-weight: 400
+      font-style: italic
+      line-height: 1.2
+      margin-bottom: 0.25em
+      letter-spacing: 1px
+
+      @include media($bp-md)
+        font-size: 2.75em
+
+      a
+        border-bottom: none
+        color: $text-color
+        
+        &:hover
+          color: $link-color
+          border-bottom: dotted 1px tint($text-color, 50%)
+
+    .date
+      color: shade($background-color-dark, 38.2%)
+      font-family: $sans
+      font-size: 1em
+      font-style: italic
+      margin-bottom: 1.75em
+      letter-spacing: 1px
+      &:before
+        content: "\2014\00a0"
+      &:after
+        content: "\00a0\2014"
+      @include media($bp-xs)
+        font-size: 1.125em
+
+  p
+    font-family: $serif
+    font-weight: 400
+
+    @include media($bp-sm)
+    font-size: 1.625em
+
+  p+p, aside+p, figure+p
+    text-indent: 1.5em
+    margin-top: -1.25em
+
+  
+  aside, figure
+    margin: 0 auto
+    padding: 2em 1em 1.5em
+    border-top: dotted 1px $text-color
+    border-bottom: dotted 1px $text-color
+  
+    @include media($bp-xs)
+      width: 15em
+
+    & > a 
+      border-bottom: none
+    
+    h1, p, figcaption
+      font-family: $sans
+      line-height: 1.2
+
+    h1
+      color: $text-color-medium
+      font-weight: 700
+      font-size: 1.25em
+      margin-bottom: 0.25em
+  
+    p, figcaption
+      font-weight: 300
+      font-size: 1em
+      text-indent: 0
+      color: $text-color-light
+
+      &:last-of-type
+        margin-bottom: 0
+
+    img
+      width: 100%
+      height: auto
+      margin-bottom: 0.5em
+    
+  aside
+    @include media($bp-xs)
+      float: right
+      margin: 0 -1em 1em 0.75em
+      padding: 2em 1em 1.5em
+
+    @include media($bp-md)
+      margin-right: -2em
+
+    @include media($bp-lg)
+      margin-right: -3.5em
+  
+  figure
+    @include media($bp-xs)
+      float: left
+      text-align: right
+      margin: 1em 1.5em 1em -1.5em
+      padding: 2em 1em 1.5em
+
+    @include media($bp-md)
+      margin-left: -2em
+      margin-top: 0
+
+    @include media($bp-lg)
+      margin-left: -3.5em
+      margin-right: 2.5em

@@ -1,0 +1,356 @@
+
+/* -- Layout.sass -- */
+
+html, body
+  height: 100%
+
+html
+  margin-top: 0
+
+body
+  background-color: $background-color
+  color: $text-color
+  border-top: solid 5px $text-color
+
+.wrapper
+  *zoom: 1
+  margin-left: auto
+  margin-right: auto
+  padding: 0 25px
+  max-width: $max-width
+  
+  @include media($bp-sm)
+    padding: 0 35px
+
+.wrapper:before, .wrapper:after 
+  content: ""
+  display: table
+
+.wrapper:after 
+  clear: both
+
+section
+  padding: 4em 0
+  @include row()
+
+.jumbo
+  background-color: $background-color
+  padding: 15em 0 3em
+ 
+  .introduction
+    height: 12em
+    @include media($bp-md)
+      @include span-columns(12)
+
+  h1
+    line-height: 1.2
+    margin: 0 0 0.25%
+
+  h1.name
+    font-size: 3.5em
+    font-weight: 700
+    letter-spacing: -0.1rem
+    word-spacing: 0.1rem
+    color: $text-color
+
+    .highlight
+      color: $link-color
+
+  h1.occupation
+    font-family: $serif
+    font-size: 2.0125em
+    font-style: italic
+    color: shade($tan, 38.2%)
+    padding-top: 0.25em
+
+.band
+  background-color: $background-color-dark
+  padding: 4em 0
+
+  .wrapper
+    text-align: center
+
+  .inner
+    @include media($bp-sm)
+      @include span-columns(6)
+      @include shift(3)
+
+  h1
+    color: $text-color
+    font-family: $sans
+    font-size: 3.5em
+    font-weight: 700
+    // font-style: italic
+    margin: 0.5em auto 0
+
+  p
+    color: tint($text-color, 25%)
+    font-size: 1.4125em
+    font-weight: 400
+
+  p + h1
+    margin-top: 1.25em
+
+.label
+  background-color: $background-color-dark
+  // line-height: 1.4
+  text-align: center
+  padding: 5em 0 6em
+
+  .wrapper
+    margin: auto
+    max-width: 1000px    
+  
+  h1
+    color: $text-color
+    font-family: $serif
+    font-style: italic
+    font-weight: 400
+    font-size: 2.25em
+    margin-top: 0.75em
+    margin-bottom: 0
+
+    .button
+      font-size: 0.5em
+      font-style: normal
+      font-weight: 300
+      border-width: 2px
+      margin-bottom: 1em
+
+#skills
+  background-color: $background-color
+  padding: 8em 0 6em
+
+  .skill-wrap
+    position: relative
+    padding-left: 22.5em
+    margin-bottom: 3em
+    
+    @include media($bp-sm)
+      @include span-columns(10)
+      @include shift(1)
+    
+    h1
+      color: $text-color
+      margin: 0 0 0.5em
+      font-family: $serif
+      font-weight: 700
+      font-style: italic
+      font-size: 5em
+      line-height: 1
+
+    h2
+      font-family: $sans
+      font-size: 1.6125em
+      font-weight: 300
+      margin-top: 0
+      margin-bottom: 1em
+
+      @include media($bp-sm)
+        line-height: 1.5
+
+    p 
+      font-family: $serif
+      font-size: 1.5em
+      line-height: 1.375
+
+    aside
+      position: absolute
+      top: 0
+      left: 0
+      width: 18em
+      text-align: center
+
+      img
+        width: 100%
+        height: auto
+        border-radius: 7px
+        margin: 0 0 1.375em
+
+      p, li
+        color: shade($background-color-dark, 37%)
+        line-height: 1.7
+
+      li
+        text-align: right
+        font-weight: 300
+
+#work 
+  padding: 4em 0
+
+  .title
+    text-align: center
+    font-size: 3.5em
+    margin-bottom: 0.5em
+
+  li
+    display: block
+    background-color: $background-color
+    
+    .close
+      color: $link-color-alt
+      display: none
+
+    h1
+      padding: 0.5em 0
+      color: tint($text-color, 25%)
+      @include transition(all 0.2s ease-out)
+    
+      .project-type
+        font-weight: 400
+        font-family: $serif
+        font-style: italic
+        color: tint($text-color, 50%)
+
+    &:hover
+      h1
+        color: $text-color
+        padding-left: 0.05em
+        @include transition(all 0.2s ease-out)
+
+  li header
+    position: relative
+    cursor: pointer
+    @include span-columns(10)
+    @include shift(1)
+  
+  .content
+    height: auto
+    max-height: 0
+    overflow: hidden
+    @include span-columns(10)
+    @include shift(1)
+    @include transition(max-height 0.3s ease-out)
+
+    img, .description
+      padding: 2em 0 3em
+
+    .description
+      @include span-columns(7)
+    
+    img
+      border-radius: 7px
+      @include span-columns(4)
+      @include shift(1)
+
+  h1
+    color: $text-color
+    font-family: $sans
+    font-size: 2.25em
+    font-weight: 700
+    margin: 0
+
+  p
+    color: tint($text-color, 38.2%)
+    font-family: $sans
+    font-size: 1.25em
+    font-weight: 400
+
+  p + h1
+    margin-top: 1.25em
+
+  li.active
+
+    .close
+      display: inline
+
+    header h1
+      padding-left: 0
+      &:hover
+        padding-left: 0
+    
+    .content
+      max-height: 500px
+      @include transition(max-height 0.3s ease-out)
+
+  
+#contact
+  height: 500px
+  position: relative
+
+  .wrapper
+    height: 100%
+  
+  #map
+    height: 100%
+    width: 100% 
+    position: absolute
+    top: 0
+    left: 0 
+    z-index: 1
+
+  .overlay
+    height: 100%
+    width: 100% 
+    position: absolute
+    top: 0
+    left: 0 
+    z-index: 2
+  
+    .column
+      background-color: $light-grey-trans
+      height: 100%
+      padding: 5em 2em 0
+      text-align: center
+
+      @include media($bp-md)
+        @include span-columns(5)
+        @include shift(1)
+ 
+      h1, h2, p
+        font-family: $sans
+        padding: 0
+        margin: 0
+
+      h1
+        color: $link-color
+        font-size: 2em
+        margin-bottom: 0.5em
+        font-weight: 700
+
+      h2
+        color: $text-color
+        font-size: 1.25em
+        font-weight: 700
+        background-color: transparent
+
+      p
+        font-family: $sans
+        font-size: 1.125em
+        color: $text-color
+        background-color: transparent
+        font-weight: 300
+        margin-bottom: 2em
+
+
+.skill-stars
+  float: right
+  font-size: 1.4em
+
+.arrow-section-dark
+  background-color: $background-color
+
+.arrow-section-medium
+  background-color: $background-color
+
+.arrow-section-light
+  background-color: $background-color-dark
+
+.arrow-down-dark, .arrow-down-medium, .arrow-down-light
+  height: 0
+  width: 0
+  margin: auto
+  border-top: solid 1.75em transparent
+  border-bottom: solid 1.75em transparent
+  border-right: solid 2.75em transparent
+  border-left: solid 2.75em transparent
+  margin-bottom: -1.5em
+
+.arrow-down-dark
+  border-top-color: $background-color-dark
+
+.arrow-down-medium
+  border-top-color: $background-color-dark
+
+.arrow-down-light
+  border-top-color: $background-color

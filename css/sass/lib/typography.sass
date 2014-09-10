@@ -1,0 +1,121 @@
+
+/* -- Typography -- */
+
+body
+  font-family: $sans
+  color: $text-color
+  font-size: 1em
+  line-height: 1.5
+  // text-rendering: optimizeLegibility
+
+a
+  text-decoration: none
+  color: $link-color
+  border-bottom: dotted 1px rgb(196, 195, 195)
+  @include transition(color 150ms ease-in)
+  
+  &:hover
+    color: $link-hover-color
+    @include transition(color 50ms ease-in)
+
+h1, h2, h3
+  margin-top: 1.5em
+  margin-bottom: 0.25em 
+
+h1
+  color: $link-color
+  font-family: $sans
+  font-size: 1.75em
+  font-weight: 500
+  
+  @include media($bp-sm)
+    font-size: 2em
+
+h2
+  color: shade($background-color-dark, 37%)
+  font-family: $serif
+  font-size: 1.625em
+  
+  @include media($bp-sm)
+    font-size: 1.6875em
+  
+  @include media($bp-lg)
+    font-size: 1.75em
+
+h3
+  font-family: $sans
+  font-size: 1.25em
+  font-weight: 400
+  font-style: italic
+  color: tint($text-color, 50%)
+  
+  @include media($bp-sm)
+    font-size: 1.3125em
+  
+  @include media($bp-lg)
+    font-size: 1.4375em
+
+h4
+  margin-bottom: 0.875em
+
+p
+  font-family: $serif
+  font-weight: 300
+  margin-bottom: 1.25em
+  font-size: 1.0625em
+  @include media($bp-sm)
+    font-size: 1.1875em
+  @include media($bp-lg)
+    font-size: 1.25em
+
+p, li
+  letter-spacing: 0.01rem
+
+ul
+  list-style: none
+  padding-bottom: 1.25em
+
+.button
+  display: inline-block
+  padding: 15px 24px
+  border: solid 2px $link-hover-color
+  background-color: $link-hover-color
+  color: $background-color
+  font-family: $sans
+  font-weight: 700
+  border-radius: 9px
+  @include transition(background-color 200ms ease-in, color 200ms ease-in, border-color 200ms ease-in)
+
+  &:hover
+    color: $background-color
+    border-color: $link-color
+    background-color: $link-color
+    @include transition(background-color 50ms ease-in, border-color 50ms ease-in, color 50ms ease-in)
+
+.dropcap
+  text-indent: 0
+
+  &:first-letter
+    font-family: $sans
+    float: left
+    color: $link-color
+    font-size: 350%
+    margin: -9px 0 -5px 0
+    padding: 0 0.15em 0 0
+    height: .7em
+    line-height: .85em
+
+.stars
+  text-align: center
+  &:after
+    content: "* * *"
+
+.dash
+  width: 12.5%
+  height: 0
+  border-bottom: solid 2px white
+  margin: auto auto 1.35em
+
+.dash.center
+  margin-left: auto
+  margin-right: auto

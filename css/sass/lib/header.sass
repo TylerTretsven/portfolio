@@ -1,0 +1,120 @@
+
+/* -- Header.sass -- */
+
+body > header
+  width: 100%
+  font-family: $sans
+  font-weight: 400
+  padding: ($header-padding * 2.5) 0 ($header-padding / 2)
+
+  .logo
+    color: $link-color
+    display: block
+    border-bottom: none
+    margin-bottom: 0.25em
+    font-weight: 700
+    font-size: 2.25em
+    text-align: center
+    letter-spacing: -0.05rem
+    
+    @include media($bp-xxs)
+      display: inline
+      // font-size: 1.625em
+      float: left
+
+    &:hover
+      color: $link-color-alt
+
+  ul
+    display: block
+    padding-top: 0.5em
+    padding-bottom: 1.75em
+    border-bottom: solid 1px tint($text-color, 75%)
+    // text-transform: uppercase
+
+    @include media($bp-xxs)
+      display: inline
+      text-align: left
+      float: right
+      padding-bottom: 0
+      border-bottom: none
+  
+    li
+      display: block
+      list-style-type: none
+      padding: 0 1em
+      // letter-spacing: 1px
+      font-family: $serif
+      font-style: italic
+
+      @include media(319px)
+        display: inline
+      
+      @include media(410px)
+        font-size: 1.2em
+      
+      @include media($bp-xxs)
+        font-size: 1.625em
+
+      @include media($bp-sm)
+        padding: 0 0.75em
+
+      &:first-of-type
+        padding-left: 0
+
+      &:last-of-type
+        padding-right: 0
+
+      a
+        color: shade($tan, 38.2%)
+        border-bottom: none
+
+        // &:hover
+        //   color: $link-hover-color
+        //   border-bottom: dotted 1px tint($text-color, 50%)
+
+        &:hover
+          color: $link-color
+
+      a.active
+        color: $link-color
+        font-weight: 600
+
+        &:hover
+          color: $link-color
+
+      // Effect forked from http://tympanus.net/codrops/2013/08/06/creative-link-effects/
+      a::before,
+      a::after
+        color: $text-color
+        display: inline-block
+        font-style: normal
+        opacity: 0
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s
+        transition: transform 0.3s, opacity 0.2s
+
+      a::before 
+        margin-right: 10px
+        content: '{'
+        -webkit-transform: translateX(20px)
+        -moz-transform: translateX(20px)
+        transform: translateX(20px)
+
+
+      a::after 
+        margin-left: 10px
+        content: '}'
+        -webkit-transform: translateX(-20px)
+        -moz-transform: translateX(-20px)
+        transform: translateX(-20px)
+
+
+      a:hover::before,
+      a:hover::after,
+      a:focus::before,
+      a:focus::after 
+        opacity: 1
+        -webkit-transform: translateX(0px)
+        -moz-transform: translateX(0px)
+        transform: translateX(0px)
